@@ -1,17 +1,17 @@
 const btnHamburger = document.querySelector('#btnHamburger');
 // const body = document.querySelector('body');
-// const header = document.querySelector('.header');
+const header = document.querySelector('.header');
 // const overlay = document.querySelector('.overlay');
 // const fadeElems = document.querySelectorAll('.has-fade');
 
 btnHamburger.addEventListener('click', function(){
   console.log('click hamburger');
 
-  if(btnHamburger.classList.contains('open')){ 
-    btnHamburger.classList.remove('open'); 
+  if(header.classList.contains('open')){ 
+    header.classList.remove('open'); 
   }
   else { 
-    btnHamburger.classList.add('open');
+    header.classList.add('open');
   }
 });
 
