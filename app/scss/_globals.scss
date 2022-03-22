@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: $font-med;
+  font-size: $font-md;
   font-weight:300;
   color: $purple;
   line-height: 1.5;
@@ -51,10 +51,14 @@ button, .button {
 
 // Visibility
 .hide-for-mobile {
-  // hide for tabler and mobile
+  @include breakpoint-down(medium){
+    display: none;
+  }
 }
 
 .hide-for-desktop {
-  // hide for desktop viewport width
+  @include breakpoint-up(large){
+    display: none;
+  }
 }
 

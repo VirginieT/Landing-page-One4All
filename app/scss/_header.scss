@@ -3,12 +3,13 @@
     // z-index: 1;  
 
  nav {
-     padding: 24px;
+     padding: 1.1rem 1.5rem;
  }
      
  &__logo {
     img {
-
+      width: 8.8rem;
+      height: 2rem;
     }
  }
 
@@ -19,24 +20,75 @@
         width: 26px;
         height: 2px;
         background-color: $blue;
+        transition: 300ms ease-in-out;
+        transform-origin: 3px 1px;
 
       &:not(:last-child){
-        margin-bottom: 3px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &.open {
+
+      > span:first-child {
+        transform: rotate(45deg);
+      } 
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+
+
+    }
+
+  }
+
+&__links {
+
+  a {
+    position: relative;
+    font-size: $font-md;
+    color: $lightGrey;
+    transition: color 300ms ease-in-out;
+
+    &:not(:last-child){
+      margin-right: 32px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 5px;
+      left: 0;
+      right: 0;
+      bottom: -30px;
+      background: linear-gradient(to right, $blue, $green);
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
+    &:hover {
+      color: $darkGrey;
+
+      &::before {
+        opacity: 1;
       }
     }
   }
-
- &__links {
-
-  a {
-    font-size: $font-med;
-    color: white;
-  }
- }
+}
 
  &__cta {
-   font-size: $font-sm;
+   font-size: $font-md;
    color: white;
+   transition: opacity 300ms ease-in-out;
+
+   &:hover {
+     opacity: 0.75;
+   }
  }
 
 
