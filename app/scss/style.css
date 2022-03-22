@@ -1,36 +1,75 @@
+.faded {
+  visibility: hidden;
+}
+
 @-webkit-keyframes fade-in {
   from {
-    display: none;
+    visibility: hidden;
     opacity: 0;
   }
   1% {
-    display: block;
+    visibility: visible;
     opacity: 0;
   }
   to {
-    display: block;
+    visibility: visible;
     opacity: 1;
   }
 }
 
 @keyframes fade-in {
   from {
-    display: none;
+    visibility: hidden;
     opacity: 0;
   }
   1% {
-    display: block;
+    visibility: visible;
     opacity: 0;
   }
   to {
-    display: block;
+    visibility: visible;
     opacity: 1;
   }
 }
 
 .fade-in {
-  -webkit-animation: fade-in 200ms ease-in-out forwards;
-          animation: fade-in 200ms ease-in-out forwards;
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
 }
 
 html {
@@ -54,8 +93,17 @@ body {
   line-height: 1.5;
 }
 
+body.noscroll {
+  overflow: hidden;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .flex {
@@ -105,28 +153,21 @@ button, .button {
   }
 }
 
-.header.open .overlay {
-  display: block;
-  -webkit-animation: fade-in 300ms ease-in-out forwards;
-          animation: fade-in 300ms ease-in-out forwards;
-}
-
-.header.open .header__menu > span:first-child {
+.header.open .header__toggle > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.header.open .header__menu > span:nth-child(2) {
+.header.open .header__toggle > span:nth-child(2) {
   opacity: 0;
 }
 
-.header.open .header__menu > span:last-child {
+.header.open .header__toggle > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 .header .overlay {
-  display: none;
   opacity: 0;
   position: fixed;
   top: 0px;
@@ -138,7 +179,10 @@ button, .button {
 }
 
 .header nav {
-  padding: 1.1rem 1.5rem;
+  position: relative;
+  background-color: white;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .header__logo img {
@@ -146,7 +190,7 @@ button, .button {
   height: 2rem;
 }
 
-.header__menu > span {
+.header__toggle > span {
   display: block;
   width: 26px;
   height: 2px;
@@ -157,22 +201,40 @@ button, .button {
           transform-origin: 3px 1px;
 }
 
-.header__menu > span:not(:last-child) {
+.header__toggle > span:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.header__menu.open > span:first-child {
+.header__toggle.open > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.header__menu.open > span:nth-child(2) {
+.header__toggle.open > span:nth-child(2) {
   opacity: 0;
 }
 
-.header__menu.open > span:last-child {
+.header__toggle.open > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.header__menu {
+  position: absolute;
+  width: calc(100% - 7rem);
+  left: 25%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: bisque;
+  padding: 1.5rem;
+  border-radius: 3px;
+}
+
+.header__menu a {
+  display: block;
+  color: #6853A3;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 .header__links a {

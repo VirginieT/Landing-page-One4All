@@ -44,14 +44,14 @@ body {
   padding: 24px;
 }
 
-.header__menu > span {
+.header__toggle > span {
   display: block;
   width: 26px;
   height: 2px;
   background-color: #272727;
 }
 
-.header__menu > span:not(:last-child) {
+.header__toggle > span:not(:last-child) {
   margin-bottom: 3px;
 }
 /*# sourceMappingURL=style.css.map */
