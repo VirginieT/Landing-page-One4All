@@ -18,12 +18,30 @@
         display: block;
         width: 26px;
         height: 2px;
-        background-color: rgb(39, 39, 39);
+        background-color: $blue;
 
       &:not(:last-child){
         margin-bottom: 3px;
       }
     }
+  }
+
+ &__links {
+
+  a {
+    font-size: $font-med;
+    color: white;
+  }
+ }
+
+ &__cta {
+   font-size: $font-sm;
+   color: white;
+ }
+
+
+
+}
     // position: absolute;
     // width: calc(100% - 3rem);
     // left: 50%;
@@ -38,6 +56,3 @@
     //   color: $darkBlue;
     //   text-align: center;
     // }
-  }
-
-}

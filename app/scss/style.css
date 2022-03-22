@@ -13,7 +13,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #6853A3;
   line-height: 1.5;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
 }
 
 .flex {
@@ -40,6 +47,17 @@ body {
           align-items: center;
 }
 
+button, .button {
+  padding: 0.5rem 1.8rem;
+  border: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#05A74B), to(#006DB4));
+  background: linear-gradient(to right, #05A74B, #006DB4);
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
 .header nav {
   padding: 24px;
 }
@@ -48,10 +66,20 @@ body {
   display: block;
   width: 26px;
   height: 2px;
-  background-color: #272727;
+  background-color: #006DB4;
 }
 
 .header__menu > span:not(:last-child) {
   margin-bottom: 3px;
+}
+
+.header__links a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.header__cta {
+  font-size: 1rem;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

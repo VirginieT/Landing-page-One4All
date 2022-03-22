@@ -11,9 +11,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: $font-med;
+  font-weight:300;
+  color: $purple;
   line-height: 1.5;
+}
 
-
+a, a:visited, a:hover {
+  text-decoration: none;
 }
 
 // Flexbox
@@ -32,3 +37,24 @@ body {
     align-items: center;
   }
 }
+
+// Buttons
+button, .button {
+  padding: 0.5rem 1.8rem;
+  border: 0;
+  background: linear-gradient(to right, $green, $blue);
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+// Visibility
+.hide-for-mobile {
+  // hide for tabler and mobile
+}
+
+.hide-for-desktop {
+  // hide for desktop viewport width
+}
+
