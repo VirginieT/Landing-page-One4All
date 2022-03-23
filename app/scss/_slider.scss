@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .slider {
     position: relative;
     width: 100%;
@@ -18,38 +13,114 @@
     & input:nth-child(3):checked ~ .slides {
         left: -200%;
     }
-
+    
     & input:nth-child(1):checked ~ .arrows label:nth-child(1),
     & input:nth-child(2):checked ~ .arrows label:nth-child(2),
-    & input:nth-child(3):checked ~ .arrows label:nth-child(3) {
+    & input:nth-child(3):checked ~ .arrows label:nth-child(3),
+    & input:nth-child(4):checked ~ .arrows label:nth-child(4),
+    & input:nth-child(5):checked ~ .arrows label:nth-child(5),
+    & input:nth-child(6):checked ~ .arrows label:nth-child(6) {
         display: block;
     }
 
     & input:nth-child(1):checked ~ .dots label:nth-child(1),
     & input:nth-child(2):checked ~ .dots label:nth-child(2),
-    & input:nth-child(3):checked ~ .dots label:nth-child(3) {
+    & input:nth-child(3):checked ~ .dots label:nth-child(3),
+    & input:nth-child(4):checked ~ .dots label:nth-child(4),
+    & input:nth-child(5):checked ~ .dots label:nth-child(5),
+    & input:nth-child(6):checked ~ .dots label:nth-child(6) {
         background-color: black;
         border: 2px solid white;
     }
 
-
-    &.dots {
-        width: 100%;
-        text-align: center;
+    .slides {
         position: absolute;
-        bottom: 15px;
+        top: 0;
+        left:0;
+        width: 300%;
+        height: 100%;
+        transition: 2s ease;
+    
+        .slide {
+            width: 33.33%;
+            height: 100%;
+            float: left;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
 
-        & label {
-            display: inline-block;
-            border-radius: 100%;
-            margin: 0 5px;
-            width: 25px;
-            height: 25px;
-            background-color:white;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+            &-1 {
+                background-image: url(/assets/images/Slide_Header/Slide_Animalier/Slide-baleine.jpg);
+            }
+            &-2 {
+                background-image: url(/assets/images/Slide_Header/Slide_Environnement/SLIDE-environnement.jpg);
+            }
+            &-3 {
+                background-image: url(/assets/images/Slide_Header/Slide_Humanitaire/SLIDE-humanitaire.jpg);
+            }
+            &-4 {
+                background-image: url(/assets/images/Slide_Header/Slide_Ligue/Slide-Ligue.jpg);
+            }
+            &-5 {
+                background-image: url(/assets/images/Slide_Header/Slide_Notre_Philosophie/Slide-MARTIN-LK.jpg);
+            }
+            &-6 {
+                background-image: url(/assets/images/Slide_Header/Slide_Notre_Réseau/Slide-Notre-réseau.jpg);
+            }
+        
+            &-data {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                color: white;
+                text-align: center;
+                transform: translateY(-50%);
+                padding: 0 20%;
+        
+                & h1 {
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    font-size: 30px;
+                }
+        
+                & p {
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+        
+                & button {
+                    padding: 10px 25px;
+                    color: white;
+                    border: 1px solid white;
+                    border-radius: 0;
+                    background: transparent;
+                    outline: none;
+                    font-size: 25px;
+                    font-weight: bolder;
+        
+                    &:hover {
+                        color: black;
+                        background-color: white;
+                    }
+                }
+            }
         }
     }
 
-    &.arrows {
+    .arrows {
         display: flex;
         position: absolute;
         top: 50%;
@@ -58,10 +129,10 @@
         font-size: 60px;
         transition: 0.4s linear;
        
-        &.arrow-left {
-        left: 3%;
+        .arrow-left {
+            left: 3%;
         }
-        &.arrow-right {
+        .arrow-right {
             right: 3%;
         }
 
@@ -70,98 +141,25 @@
             text-shadow: 0px 0px 10px white, 0px 0px 10px white;
         }
 
-        & label {
+        label {
             display: none;
         }
     }
-}
-
-.slides {
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 300%;
-    height: 100%;
-    transition: 2s ease;
-}
-
-.slide {
-    width: 33.33%;
-    height: 100%;
-    float: left;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    &-data {
+    
+    .dots {
         width: 100%;
-        position: absolute;
-        top: 50%;
-        color: white;
         text-align: center;
-        transform: translateY(-50%);
-        padding: 0 20%;
-
-        & h1 {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: bolder;
-            text-transform: uppercase;
-            font-size: 30px;
-        }
-
-        & p {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        & button {
-            padding: 10px 25px;
-            color: white;
-            border: 1px solid white;
-            border-radius: 0;
-            background: transparent;
-            outline: none;
-            font-size: 25px;
-            font-weight: bolder;
-
-            &:hover {
-                color: black;
-                background-color: white;
-            }
-        }
-    }
-
-    &-1 {
-        background-image: url(/assets/images/Slide_Header/Slide_Animalier/Slide-baleine.jpg);
-    }
-    &-2 {
-        background-image: url(/assets/images/Slide_Header/Slide_Environnement/SLIDE-environnement.jpg);
-    }
-    &-3 {
-        background-image: url(/assets/images/Slide_Header/Slide_Humanitaire/SLIDE-humanitaire.jpg);
-    }
-    &-4 {
-        background-image: url(/assets/images/Slide_Header/Slide_Ligue/Slide-Ligue.jpg);
-    }
-    &-5 {
-        background-image: url(/assets/images/Slide_Header/Slide_Notre_Philosophie/Slide-MARTIN-LK.jpg);
-    }
-    &-6 {
-        background-image: url(/assets/images/Slide_Header/Slide_Notre_Réseau/Slide-Notre-réseau.jpg);
-    }
-
-    &::before {
-        content: "";
         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,0.5);
+        bottom: 15px;
+
+        label {
+            display: inline-block;
+            border-radius: 100%;
+            margin: 0 5px;
+            width: 25px;
+            height: 25px;
+            background-color:white;
+        }
     }
-
-
 }
 
