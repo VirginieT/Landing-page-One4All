@@ -4,8 +4,8 @@ const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
 const fadeElems = document.querySelectorAll('.faded');
 
-var slides = document.querySelectorAll('.slide');
-var btns = document.querySelectorAll('.btn');
+const slides = document.querySelectorAll('.slide');
+const btns = document.querySelectorAll('.btn');
 let currentSlide = 1;
 
 
@@ -34,7 +34,7 @@ btnHamburger.addEventListener('click', function(){
 
 
 // for image slider manual nav
-var manualNav = function(manual){
+const manualNav = function(manual){
     slides.forEach((slide) => {
         slide.classList.remove('active');
 
@@ -55,11 +55,11 @@ btns.forEach((btn, i) => {
 });
 
 // for image slider autoplay nav
-var repeat = function(activeClass){
+const repeat = function(activeClass){
     let active = document.getElementsByClassName('active');
     let i = 1;
 
-    var repeater = () => {
+    const repeater = () => {
         setTimeout(function() {
             [...active].forEach((activeSlide) => {
                 activeSlide.classList.remove('active');
