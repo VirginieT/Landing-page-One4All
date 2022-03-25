@@ -2,6 +2,17 @@
     // position: relative;
     // z-index: 1;  
 
+    &__logo {
+      width: 10%;
+      height: 10%;
+      margin-top: 1%;
+
+    img {
+        width: 80px;
+        height: 80px;
+      }
+  }
+
     // Buttons
 button, .button {
   padding: 0.5rem 1.8rem;
@@ -38,7 +49,7 @@ button, .button {
     height: 100%;
     opacity: 0;
     transition: all 0.5s;
-    box-shadow: 0 0 10px 40px rgb(54, 184, 89);
+    box-shadow: 0 0 10px 40px rgb(159, 223, 176);
   }
   
   &:active:after {
@@ -88,19 +99,10 @@ button, .button {
   nav {
     position: relative;
     background-color: white;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
     
-  &__logo {
-
-      img {
-        width: 8.8rem;
-        height: 2rem;
-        filter: invert(100%);
-      }
-  }
-
   &__toggle {  // Mobile Toggle
 
     > span {
@@ -129,7 +131,6 @@ button, .button {
           transform: rotate(-45deg);
         }
       }
-
   }
 
   &__menu {
@@ -169,17 +170,17 @@ button, .button {
         height: 5px;
         left: 0;
         right: 0;
-        bottom: -30px;
-        background: linear-gradient(to right, $blue, $green);
+        bottom: -20px;
+        background: linear-gradient(to right, $blue, $purple);
         opacity: 0;
         transition: opacity 300ms ease-in-out;
       }
       &:hover {
         color: $darkGray;
 
-        &::before {
-          opacity: 1;
-        }
+      &::before {
+        opacity: 1;
+      }
       }
     }
   }
@@ -188,6 +189,11 @@ button, .button {
     font-size: $font-md;
     color: white;
     transition: opacity 300ms ease-in-out;
+
+    img {
+      margin-top: 2px;
+      height: 2rem;
+    }
 
     &:hover {
       opacity: 0.75;

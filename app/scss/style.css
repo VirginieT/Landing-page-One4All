@@ -153,6 +153,46 @@ a, a:visited, a:hover {
   }
 }
 
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  background: #c2e6f8;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.back-to-top:hover {
+  opacity: 40%;
+}
+
+.hidden {
+  display: none;
+  opacity: 0%;
+}
+
+.back-to-top-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #416575;
+}
+
+.header__logo {
+  width: 10%;
+  height: 10%;
+  margin-top: 1%;
+}
+
+.header__logo img {
+  width: 80px;
+  height: 80px;
+}
+
 .header button, .header .button {
   padding: 0.5rem 1.8rem;
   border: 0;
@@ -194,8 +234,8 @@ a, a:visited, a:hover {
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-box-shadow: 0 0 10px 40px #36b859;
-          box-shadow: 0 0 10px 40px #36b859;
+  -webkit-box-shadow: 0 0 10px 40px #9fdfb0;
+          box-shadow: 0 0 10px 40px #9fdfb0;
 }
 
 .header button:active:after, .header .button:active:after {
@@ -242,15 +282,8 @@ a, a:visited, a:hover {
 .header nav {
   position: relative;
   background-color: white;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.header__logo img {
-  width: 8.8rem;
-  height: 2rem;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
 .header__toggle > span {
@@ -320,9 +353,9 @@ a, a:visited, a:hover {
   height: 5px;
   left: 0;
   right: 0;
-  bottom: -30px;
-  background: -webkit-gradient(linear, left top, right top, from(#006DB4), to(#05A74B));
-  background: linear-gradient(to right, #006DB4, #05A74B);
+  bottom: -20px;
+  background: -webkit-gradient(linear, left top, right top, from(#006DB4), to(#6853A3));
+  background: linear-gradient(to right, #006DB4, #6853A3);
   opacity: 0;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
@@ -341,6 +374,11 @@ a, a:visited, a:hover {
   color: white;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+}
+
+.header__cta img {
+  margin-top: 2px;
+  height: 2rem;
 }
 
 .header__cta:hover {
