@@ -135,17 +135,16 @@ button, .button {
   &__menu {
     z-index: 6;
     position: absolute;
-    width: calc(100% - 17rem);
-    left: 25%;
+    width: calc(100% - 3rem);
+    left: 50%;
     transform: translateX(-50%);
-    background: rgb(247, 240, 240);
     padding: 1.5rem;
     border-radius: 3px;
-
+    background: rgb(247, 240, 240);
 
     a {
       display: block;
-      color: $darkGrey;
+      color: $darkGray;
       padding: 0.5rem;
       text-align: center;
     }
@@ -156,7 +155,7 @@ button, .button {
     a {
       position: relative;
       font-size: $font-md;
-      color: $darkGrey;
+      color: $darkGray;
       transition: color 300ms ease-in-out;
 
       &:not(:last-child){
@@ -176,7 +175,7 @@ button, .button {
         transition: opacity 300ms ease-in-out;
       }
       &:hover {
-        color: $darkGrey;
+        color: $darkGray;
 
         &::before {
           opacity: 1;
