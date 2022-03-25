@@ -7,15 +7,13 @@
       height: 10%;
       margin-top: 1%;
 
+
     img {
         width: 80px;
         height: 80px;
       }
   }
 
-    // Buttons
-
-    // Hamburger Open Styles
   &.open {
 
     .header__toggle {
@@ -46,8 +44,8 @@
   nav {
     position: relative;
     background-color: white;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
 
     button, .button {
       position: relative;
