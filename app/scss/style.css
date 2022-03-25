@@ -193,67 +193,6 @@ a, a:visited, a:hover {
   height: 80px;
 }
 
-.header button, .header .button {
-  padding: 0.5rem 1.8rem;
-  border: 0;
-  position: relative;
-  cursor: pointer;
-  color: white;
-  font-weight: 500;
-  background-color: black;
-  border-radius: 1em;
-  font-size: 25px;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-}
-
-.header button:hover, .header .button:hover {
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
-  background-color: #3A3A3A;
-}
-
-.header button:after, .header .button:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 4em;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-box-shadow: 0 0 10px 40px #9fdfb0;
-          box-shadow: 0 0 10px 40px #9fdfb0;
-}
-
-.header button:active:after, .header .button:active:after {
-  -webkit-box-shadow: 0 0 0 0 #11396d;
-          box-shadow: 0 0 0 0 #11396d;
-  position: absolute;
-  border-radius: 4em;
-  left: 0;
-  top: 0;
-  opacity: 1;
-  -webkit-transition: 0s;
-  transition: 0s;
-}
-
-.header button:active, .header .button:active {
-  top: 1px;
-}
-
 .header.open .header__toggle > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -284,6 +223,72 @@ a, a:visited, a:hover {
   background-color: white;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
+}
+
+.header nav button, .header nav .button {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  color: white;
+  background-color: black;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.7rem 1.8rem 0;
+  border: 0;
+  border-radius: 1em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+}
+
+.header nav button:hover, .header nav .button:hover {
+  background: #0e49a0;
+  -webkit-box-shadow: 0px 2px 12px 8px #0128a7;
+          box-shadow: 0px 2px 12px 8px #0128a7;
+  color: #000;
+}
+
+.header nav button:after, .header nav .button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #0b22ee;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.header nav button:active:after, .header nav .button:active:after {
+  -webkit-box-shadow: 0 0 0 0 #11396d;
+          box-shadow: 0 0 0 0 #11396d;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.header nav button:active, .header nav .button:active {
+  top: 1px;
 }
 
 .header__toggle > span {
@@ -374,6 +379,7 @@ a, a:visited, a:hover {
   color: white;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+  text-align: center;
 }
 
 .header__cta img {
@@ -394,7 +400,7 @@ a, a:visited, a:hover {
 
 .slider .slide {
   z-index: 1;
-  position: relative;
+  position: absolute;
   top: 10px;
   width: 100%;
   -webkit-clip-path: circle(0% at 0 50%);
@@ -419,27 +425,35 @@ a, a:visited, a:hover {
   padding: 0 20px 0 20px;
 }
 
-.slider .slide .button {
+.slider .slide .discover_btn {
+  position: relative;
+}
+
+.slider .slide .discover_btn .button {
   position: absolute;
-  right: 0;
-  margin: 27rem 9rem;
+  top: 450px;
+  right: 120px;
+  z-index: 1;
+  padding: 0.5rem 1.8rem;
   border-radius: 0;
   outline: none;
-  z-index: 1;
   border: 0.16em solid #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Roboto',sans-serif;
-  font-weight: 400;
+  font-weight: 450;
   color: #FFFFFF;
+  background-color: black;
   text-align: center;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
 }
 
-.slider .slide .button:hover {
+.slider .slide .discover_btn .button:hover {
   color: black;
   background-color: white;
+  border: 0.16em solid #000000;
+  font-weight: 600;
 }
 
 .slider .dots {
@@ -472,16 +486,20 @@ a, a:visited, a:hover {
 
 @media (max-width: 820px) {
   .slider {
-    width: 600px;
-    height: 375px;
+    width: 800px;
+    height: 365px;
+  }
+  .slider .slide .discover_btn {
+    bottom: 270px;
+    left: 70px;
   }
   .slider .slide .button {
-    width: 25px;
-    height: 25px;
+    width: 125px;
+    height: 36px;
     font-size: 11px;
   }
   .slider .dots {
-    bottom: 25px;
+    bottom: 20px;
   }
   .slider .dots .btn {
     width: 10px;
@@ -492,15 +510,18 @@ a, a:visited, a:hover {
 
 @media (max-width: 620px) {
   .slider {
-    width: 400px;
-    height: 25px;
+    width: 600px;
+    height: 280px;
+  }
+  .slider .slide .discover_btn {
+    bottom: 270px;
+    left: 70px;
   }
   .slider .slide .button {
-    width: 25px;
-    height: 25px;
-    left: 200px;
-    top: 100px;
-    font-size: 11px;
+    width: 90px;
+    height: 27px;
+    font-size: 6px;
+    padding: 0.1 0.8rem;
   }
   .slider .dots {
     bottom: 15px;
@@ -514,18 +535,26 @@ a, a:visited, a:hover {
 
 @media (max-width: 420px) {
   .slider {
-    width: 320px;
-    height: 200px;
+    width: 405px;
+    height: 190px;
+  }
+  .slider .slide .discover_btn {
+    bottom: 365px;
+    left: 87px;
   }
   .slider .slide .button {
-    width: 15px;
-    height: 15px;
-    left: 200px;
-    top: 100px;
-    font-size: 7px;
+    width: 76px;
+    height: 20px;
+    font-size: 3px;
+    padding: 0.1 0.5rem;
   }
   .slider .dots {
     bottom: 10px;
+  }
+  .slider .dots .btn {
+    width: 7px;
+    height: 7px;
+    margin: 5px;
   }
 }
 

@@ -6,6 +6,7 @@ const fadeElems = document.querySelectorAll('.faded');
 
 const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('.btn');
+
 let currentSlide = 1;
 
 
@@ -53,6 +54,7 @@ btns.forEach((btn, i) => {
         currentSlide = i;
     });
 });
+
 
 // for image slider autoplay nav
 const repeat = function(activeClass){
