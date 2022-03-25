@@ -1,29 +1,12 @@
 .presentation {
     background-color: $lightGray;
+    
+    h1 {
+     text-align: center;
+    }
 
     .container {
-  
-      @include breakpoint-up(large){    
-        display: flex;
-        align-items: center;
-      }
-    }
-  
-  
-    &__text {
-      text-align: center;
-
-      a {
-        display: block;
-        color: $purple;
-        padding: 0.5rem;
-        text-align: center;
-      }
-
-      img {
-          width: 100%;
-      }
-
+        
       .button {
         z-index: 5;
         display:inline-block;
@@ -38,11 +21,44 @@
         color:#FFFFFF;
         text-align:center;
         transition: all 0.15s;
+        background-color: black;
+        width: 19%;
+
+        a {
+          display: block;
+          color: $purple;
+          padding: 0.5rem;
+          text-align: center;
+        }
 
         &:hover {
-            color: black;
-            background-color: white;
-        }
+          color: black;
+          background-color: white;
+      }
+  
+      @include breakpoint-up(large){    
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+  
+    .presentation__text {
+      align-items: center;
+      display: flex;  
+      margin: 0 20%;
+      }
+
+    .container_text {
+      width: 500px;
+    }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
       }
   
       @include breakpoint-up(large){

@@ -537,33 +537,11 @@ a, a:visited, a:hover {
   background-color: #f5f0f0;
 }
 
-@media (min-width: 64em) {
-  .presentation .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.presentation__text {
+.presentation h1 {
   text-align: center;
 }
 
-.presentation__text a {
-  display: block;
-  color: #6853A3;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.presentation__text img {
-  width: 100%;
-}
-
-.presentation__text .button {
+.presentation .container .button {
   z-index: 5;
   display: inline-block;
   padding: 0.5em 3em;
@@ -579,15 +557,57 @@ a, a:visited, a:hover {
   text-align: center;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
+  background-color: black;
+  width: 19%;
 }
 
-.presentation__text .button:hover {
+.presentation .container .button a {
+  display: block;
+  color: #6853A3;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.presentation .container .button:hover {
   color: black;
   background-color: white;
 }
 
 @media (min-width: 64em) {
-  .presentation__text {
+  .presentation .container .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.presentation .container .presentation__text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20%;
+}
+
+.presentation .container .container_text {
+  width: 500px;
+}
+
+.presentation .container p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 64em) {
+  .presentation .container {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
