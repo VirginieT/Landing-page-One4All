@@ -1,13 +1,23 @@
 .presentation {
   background-color: $lightGray;
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  align-items: center;
+ 
+  img {
+    position: relative;
+    top: 20px;
+    margin-bottom: 50px
+  }
 
   h1 {
     text-align: center;
-    color: saturate(lighten(#071c49,55%),60%);
+    color: saturate(lighten(#000107,55%),60%);
     max-width: 40ch;
-    text-align: center;
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    padding: 0 1rem;
   }
 
   @keyframes scale {
@@ -60,13 +70,15 @@
 
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 0 280px 0 280px;
 
     a {
       display: block;
       color: $purple;
       padding: 0.5rem;
       text-align: center;
+      margin-right: 100px;
     }
 
     &:hover {
@@ -79,21 +91,16 @@
     }
   }
 
-  .presentation__text {
-    align-items: center;
-    display: flex;
-    margin: 0 20%;
+  .presentation__left {
+    margin: 0 9%;
   }
-
-  .container_text {
-    width: 500px;
-  }
+  
 
   p {
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.5;
-    margin: 0;
+    margin-bottom: 78px;
     padding: 0;
   }
 
@@ -105,6 +112,8 @@
 
   button {
     position: relative;
+    bottom: 41px;
+    left: 113px;  
     outline: none;
     text-decoration: none;
     border-radius: 50px;

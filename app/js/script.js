@@ -109,3 +109,6 @@ const goToTop = () => {
   backToTopButton.addEventListener("click", goToTop)
 
 
+
+AOS.init();
+AOS.init();

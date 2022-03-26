@@ -641,23 +641,75 @@ a, a:visited, a:hover {
   }
 }
 
+.world__image {
+  position: relative;
+  z-index: 1;
+}
+
 .world__image img {
   width: 100%;
+  height: 100%;
+}
+
+.world__image .logos > :first-child {
+  width: 20%;
+  height: 30%;
+  right: 7%;
+  top: 20%;
+}
+
+.world__image .logos > img:nth-child(2) {
+  width: 30%;
+  height: 20%;
+  left: 3%;
+  top: 20%;
+}
+
+.world__image .logos > img:last-child {
+  width: 70%;
+  height: 10%;
+  right: 3%;
+  top: 62%;
+}
+
+.world__image .logos img {
+  position: absolute;
+  top: 0;
+  z-index: 2;
 }
 
 .presentation {
   background-color: #f5f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentation img {
+  position: relative;
+  top: 20px;
+  margin-bottom: 50px;
 }
 
 .presentation h1 {
   text-align: center;
-  color: #6a99ff;
+  color: #2140ff;
   max-width: 40ch;
-  text-align: center;
   -webkit-transform: scale(0.94);
           transform: scale(0.94);
   -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
           animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  padding: 0 1rem;
 }
 
 @-webkit-keyframes scale {
@@ -730,10 +782,11 @@ a, a:visited, a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 280px 0 280px;
 }
 
 .presentation .container a {
@@ -741,6 +794,7 @@ a, a:visited, a:hover {
   color: #6853A3;
   padding: 0.5rem;
   text-align: center;
+  margin-right: 100px;
 }
 
 .presentation .container:hover {
@@ -758,25 +812,15 @@ a, a:visited, a:hover {
   }
 }
 
-.presentation .presentation__text {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 20%;
-}
-
-.presentation .container_text {
-  width: 500px;
+.presentation .presentation__left {
+  margin: 0 9%;
 }
 
 .presentation p {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.5;
-  margin: 0;
+  margin-bottom: 78px;
   padding: 0;
 }
 
@@ -794,6 +838,8 @@ a, a:visited, a:hover {
 
 .presentation button {
   position: relative;
+  bottom: 41px;
+  left: 113px;
   outline: none;
   text-decoration: none;
   border-radius: 50px;

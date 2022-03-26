@@ -1,7 +1,45 @@
-.world__image {
+.world {
     
-    img {
-        width: 100%;
+    &__image {
+        position: relative;
 
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logos {
+
+            > :first-child {
+                width:20%; 
+                height:30%;
+                right: 7%;
+                top: 20%;
+            }
+            
+            > img:nth-child(2) {
+                width:30%; 
+                height:20%;
+                left: 3%;
+                top: 20%;
+            }
+            
+            > img:last-child {
+                width:70%; 
+                height:10%;
+                right: 3%;
+                top: 62%;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                z-index: 2;
+            }
+    
+        }
     }
+
 }
